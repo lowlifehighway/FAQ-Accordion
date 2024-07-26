@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+html {
+  font-size: 62.5%;
+  scrollbar-width: none;
+}
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.6rem;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  justify-content: center;
+  gap: 6.4rem;
+
+  background-color: hsl(275, 100%, 97%);
+  background-image: url('/assets/images/background-pattern-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.faq-questions {
+  margin: 0 4.8rem;
+  margin-top: 28rem;
+
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
+  border-radius: 1.6rem;
+  max-width: 60rem;
+  background-color: #fff;
+}
+.accordion-header {
+  padding: 2.4rem;
+  display: flex;
+  gap: 2.8rem;
+}
+.accordion-header > h1 {
+  font-size: 5.6rem;
+}
+.faq-questions hr {
+  margin: 0 2rem;
+  opacity: 0.3;
+}
+.accordion-item {
+  cursor: pointer;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  align-items: center;
+
+  padding: 2.4rem;
+}
+.faq-questions > div > h3 {
+  color: #000;
+  font-style: normal;
+  font-weight: 600;
+}
+.faq-questions > div > h3:hover {
+  color: #ad28eb;
+}
+.faq-questions div div {
+  grid-column: 1/-2;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
+}
+.accordion-item p {
+  padding: 1.6rem 0;
+  color: hsla(293, 16%, 49%, 0.75);
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3rem;
+  letter-spacing: -0.072rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 36em) {
+  body {
+    background-image: url('/assets/images/background-pattern-mobile.svg');
+  }
+  .faq-questions {
+    margin-top: 19.2rem;
+  }
+}
