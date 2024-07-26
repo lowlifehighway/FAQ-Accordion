@@ -1,4 +1,8 @@
 const accordionItems = document.querySelectorAll('.accordion-item');
+const firstAccordion = accordionItems[0].querySelector('div');
+firstAccordion.classList.remove('hidden');
+firstAccordion.style.maxHeight = firstAccordion.scrollHeight + 'px'; // Optional, to differentiate active items
+accordionItems[0].querySelector('img').src = '/assets/images/icon-minus.svg';
 
 accordionItems.forEach((item) => {
   const accordionIcon = item.querySelector('.accordion-item img');
